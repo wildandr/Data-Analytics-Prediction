@@ -134,3 +134,52 @@ Berikut adalah statistik ringkasan untuk beberapa variabel numerik:
 | total_of_special_requests  | 0.57      | 0     | 5     | 0.79             |
 
 Dataset bersih ini siap digunakan untuk analisis eksplorasi ataupun pengembangan model.
+
+## 4. Eksplorasi dan Analisis Data
+
+### 4.1 Pendahuluan
+Bagian ini berfokus pada eksplorasi dataset dan menganalisis pola serta tren yang relevan untuk memahami faktor yang memengaruhi pembatalan reservasi hotel. Kami tidak hanya memvisualisasikan data sebagaimana adanya, tetapi juga melakukan transformasi, agregasi, dan pembuatan variabel baru untuk menemukan wawasan yang lebih mendalam.
+
+Beberapa poin utama eksplorasi ini mencakup:
+- Menganalisis tingkat pembatalan berdasarkan jenis hotel, musim, dan lama waktu reservasi.
+- Membuat variabel baru seperti **Total Guests** dan **Cancellation Rate** untuk menyederhanakan analisis.
+- Menampilkan tren harga rata-rata harian (Average Daily Rate/ADR) dan hubungannya dengan tingkat pembatalan.
+
+### 4.2 Metodologi Visualisasi
+Visualisasi data dirancang untuk menyampaikan temuan dengan cara yang mudah dipahami, mencakup:
+1. **Grafik Bar dan Pie**: Digunakan untuk menunjukkan distribusi kategori seperti status pembatalan, asal pelanggan, dan metode pemesanan.
+2. **Grafik Garis**: Untuk mengamati tren waktu, seperti perubahan harga rata-rata harian (ADR) dan tingkat pembatalan selama periode tertentu.
+3. **Tabel Ringkasan**: Digunakan untuk perbandingan antar kategori, seperti tingkat pembatalan antara **City Hotel** dan **Resort Hotel**.
+
+### 4.3 Pengantar Visualisasi
+Setiap visualisasi dirancang dengan fokus pada poin-poin utama berikut:
+- **Grafik Status Pembatalan**: Memberikan gambaran umum tentang proporsi pembatalan dan non-pembatalan pada kedua jenis hotel.
+- **Tingkat Pembatalan Berdasarkan Jenis Hotel**: Menyoroti bahwa **Resort Hotel** memiliki tingkat pembatalan yang lebih rendah dibandingkan **City Hotel**.
+- **Tren Harga Harian (ADR)**: Menunjukkan bagaimana perubahan harga memengaruhi keputusan pembatalan pelanggan.
+- **Distribusi Pembatalan per Bulan**: Mengidentifikasi bulan dengan tingkat pembatalan tertinggi dan terendah.
+- **Sumber Reservasi**: Menganalisis peran agen perjalanan online (OTA) dan grup dalam pembatalan.
+
+### 4.4 Contoh Penggunaan Visualisasi
+- **Grafik Bar**:
+  - Menggambarkan distribusi status pembatalan (`Cancelled` vs. `Not Cancelled`).
+  - Mengidentifikasi bulan dengan tingkat reservasi tertinggi dan terendah.
+- **Grafik Pie**:
+  - Menunjukkan proporsi pembatalan berdasarkan negara asal pelanggan.
+- **Grafik Garis**:
+  - Menyoroti perubahan harga rata-rata harian (ADR) selama waktu tertentu, baik untuk pembatalan maupun non-pembatalan.
+
+### 4.5 Wawasan dan Interpretasi
+Setelah eksplorasi data, beberapa wawasan utama yang ditemukan meliputi:
+1. **Tingkat Pembatalan**:
+   - **City Hotel** memiliki tingkat pembatalan lebih tinggi dibandingkan **Resort Hotel**.
+   - **Bulan Januari** memiliki pembatalan tertinggi, sementara **Bulan Agustus** menunjukkan reservasi terbanyak.
+   
+2. **Pengaruh Harga (ADR)**:
+   - Pembatalan lebih mungkin terjadi ketika harga rata-rata harian (ADR) tinggi.
+   - Diskon dan promosi pada waktu tertentu dapat membantu mengurangi tingkat pembatalan.
+
+3. **Sumber Reservasi**:
+   - Mayoritas reservasi berasal dari agen perjalanan online (Online Travel Agencies/OTA), yang juga memiliki proporsi pembatalan tertinggi.
+
+4. **Segmentasi Pelanggan**:
+   - Kelompok pelanggan tertentu, seperti grup, lebih rentan terhadap pembatalan dibandingkan pelanggan individu.
