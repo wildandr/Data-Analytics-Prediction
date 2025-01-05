@@ -183,3 +183,54 @@ Setelah eksplorasi data, beberapa wawasan utama yang ditemukan meliputi:
 
 4. **Segmentasi Pelanggan**:
    - Kelompok pelanggan tertentu, seperti grup, lebih rentan terhadap pembatalan dibandingkan pelanggan individu.
+
+## 5. Rangkuman
+
+### 5.1 Pernyataan Masalah
+Masalah utama yang dianalisis dalam proyek ini adalah **tingginya tingkat pembatalan reservasi pada City Hotel dan Resort Hotel** dalam beberapa tahun terakhir. Tingkat pembatalan yang tinggi menyebabkan penurunan pendapatan dan rendahnya tingkat okupansi kamar, sehingga menjadi prioritas utama untuk diatasi.
+
+### 5.2 Pendekatan yang Digunakan
+Kami membahas pernyataan masalah ini dengan langkah-langkah berikut:
+- **Data yang Digunakan**: Dataset berisi 119.390 entri reservasi hotel antara Juli 2015 hingga Agustus 2017, mencakup informasi seperti jenis hotel, status pembatalan, harga rata-rata harian (ADR), dan metode pemesanan.
+- **Metodologi**:
+  - **Pembersihan Data**: Menghapus nilai hilang, variabel yang tidak relevan, dan nilai ekstrim untuk meningkatkan kualitas analisis.
+  - **Eksplorasi Data**: Menggunakan visualisasi seperti grafik batang, garis, dan pie untuk mengidentifikasi pola dan tren.
+  - **Analisis Statistik**: Menghitung tingkat pembatalan dan hubungan variabel utama seperti harga dan waktu reservasi dengan tingkat pembatalan.
+
+### 5.3 Wawasan Menarik dari Analisis
+Analisis menghasilkan beberapa wawasan menarik:
+1. **Tingkat Pembatalan**:
+   - **City Hotel** memiliki tingkat pembatalan lebih tinggi (41,7%) dibandingkan **Resort Hotel** (27,9%).
+   - Bulan dengan tingkat pembatalan tertinggi adalah **Januari**, sedangkan **Agustus** menunjukkan reservasi terbanyak.
+   
+2. **Pengaruh Harga (ADR)**:
+   - Pembatalan lebih sering terjadi ketika harga rata-rata harian (ADR) tinggi, mengindikasikan bahwa strategi harga memainkan peran penting dalam pembatalan.
+
+3. **Sumber Reservasi**:
+   - Mayoritas reservasi berasal dari **Online Travel Agencies (OTA)**, yang juga memiliki proporsi pembatalan tertinggi.
+   - Reservasi dari grup menunjukkan tingkat pembatalan yang lebih tinggi dibandingkan pelanggan individu.
+
+4. **Segmentasi Pelanggan**:
+   - Pelanggan dengan lebih banyak permintaan khusus cenderung memiliki tingkat pembatalan lebih rendah.
+
+### 5.4 Implikasi Analisis terhadap Konsumen
+Hasil analisis memberikan panduan strategis berikut bagi manajemen hotel:
+- **Strategi Harga**:
+  - Menurunkan harga pada waktu tertentu untuk mencegah pembatalan, terutama selama musim dengan tingkat pembatalan tinggi.
+- **Promosi yang Tepat Sasaran**:
+  - Menggunakan diskon dan kampanye pemasaran pada bulan dengan tingkat pembatalan tinggi seperti Januari untuk meningkatkan okupansi.
+- **Optimalisasi Kanal Pemesanan**:
+  - Mendorong pelanggan untuk memesan melalui kanal yang memiliki tingkat pembatalan lebih rendah, seperti reservasi langsung.
+
+### 5.5 Keterbatasan Analisis dan Rekomendasi Pengembangan
+1. **Keterbatasan**:
+   - **Cakupan Data**: Dataset hanya mencakup dua jenis hotel dan mungkin tidak merepresentasikan semua hotel di lokasi geografis berbeda.
+   - **Faktor Eksternal**: Faktor-faktor seperti kondisi ekonomi, cuaca, atau kejadian tak terduga selama periode analisis tidak disertakan.
+   - **Kekayaan Data**: Beberapa variabel memiliki data hilang yang signifikan (misalnya, agen pemesanan), sehingga membatasi analisis pada dimensi tersebut.
+
+2. **Rekomendasi Pengembangan**:
+   - **Penambahan Variabel Eksternal**: Sertakan data tentang musim, cuaca, atau acara besar untuk memperkaya analisis.
+   - **Analisis Lebih Lanjut**: Gunakan model prediktif untuk mengidentifikasi kemungkinan pembatalan berdasarkan karakteristik reservasi.
+   - **Data yang Lebih Luas**: Kumpulkan data dari lebih banyak hotel di lokasi geografis berbeda untuk memperluas generalisasi temuan.
+
+Dengan mengatasi keterbatasan ini, analisis di masa depan dapat memberikan wawasan yang lebih kuat dan actionable bagi industri perhotelan.
