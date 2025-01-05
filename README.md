@@ -188,10 +188,10 @@ Setelah eksplorasi data, beberapa wawasan utama yang ditemukan meliputi:
 
 3. **Sumber Reservasi**:
    - Mayoritas reservasi berasal dari agen perjalanan online (Online Travel Agencies/OTA), yang juga memiliki proporsi pembatalan tertinggi.
-  ![sumber cancelled reservasi](images/canceled_country_reservation.png)
 
 4. **Segmentasi Pelanggan**:
    - Kelompok pelanggan tertentu, seperti grup, lebih rentan terhadap pembatalan dibandingkan pelanggan individu.
+berikut adalah visualisasinya:
   ![sumber cancelled reservasi](images/canceled_country_reservation.png)
 
 ## 5. Rangkuman
