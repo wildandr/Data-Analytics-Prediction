@@ -178,17 +178,21 @@ Setiap visualisasi dirancang dengan fokus pada poin-poin utama berikut:
 Setelah eksplorasi data, beberapa wawasan utama yang ditemukan meliputi:
 1. **Tingkat Pembatalan**:
    - **City Hotel** memiliki tingkat pembatalan lebih tinggi dibandingkan **Resort Hotel**.
+     ![City vs Resort Hotel](images/reservation_different_hotel.png)
    - **Bulan Januari** memiliki pembatalan tertinggi, sementara **Bulan Agustus** menunjukkan reservasi terbanyak.
+     ![Pembatalan dan reservasi tertinggi](images/reservation_status_month.png)
    
 2. **Pengaruh Harga (ADR)**:
    - Pembatalan lebih mungkin terjadi ketika harga rata-rata harian (ADR) tinggi.
-   - Diskon dan promosi pada waktu tertentu dapat membantu mengurangi tingkat pembatalan.
+   ![Pembatalan dan reservasi tertinggi](images/average_daily.png)
 
 3. **Sumber Reservasi**:
    - Mayoritas reservasi berasal dari agen perjalanan online (Online Travel Agencies/OTA), yang juga memiliki proporsi pembatalan tertinggi.
+  ![sumber cancelled reservasi](images/canceled_country_reservation.png)
 
 4. **Segmentasi Pelanggan**:
    - Kelompok pelanggan tertentu, seperti grup, lebih rentan terhadap pembatalan dibandingkan pelanggan individu.
+  ![sumber cancelled reservasi](images/canceled_country_reservation.png)
 
 ## 5. Rangkuman
 
