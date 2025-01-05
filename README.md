@@ -162,12 +162,17 @@ Setiap visualisasi dirancang dengan fokus pada poin-poin utama berikut:
 ### 4.4 Contoh Penggunaan Visualisasi
 - **Grafik Bar**:
   - Menggambarkan distribusi status pembatalan (`Cancelled` vs. `Not Cancelled`).
-  !(images/reservation_status)
   - Mengidentifikasi bulan dengan tingkat reservasi tertinggi dan terendah.
+    Contoh Penggunaan:
+  ![Status Reservasi](images/reservation_status)
 - **Grafik Pie**:
   - Menunjukkan proporsi pembatalan berdasarkan negara asal pelanggan.
+    Contoh Penggunaan:
+  ![Pembatalan Berdasarkan Negara Asal](images/canceled_country_reservation)
 - **Grafik Garis**:
   - Menyoroti perubahan harga rata-rata harian (ADR) selama waktu tertentu, baik untuk pembatalan maupun non-pembatalan.
+    Contoh Penggunaan:
+    ![Perubahan rata rata harian](images/ADR_month)
 
 ### 4.5 Wawasan dan Interpretasi
 Setelah eksplorasi data, beberapa wawasan utama yang ditemukan meliputi:
