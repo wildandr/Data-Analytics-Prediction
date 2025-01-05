@@ -59,3 +59,78 @@ pip install pandas matplotlib seaborn
 - **`matplotlib`**: Membuat grafik sederhana hingga kompleks untuk menganalisis data.
 - **`seaborn`**: Visualisasi tingkat lanjut, seperti heatmap, countplot, dan distribusi data.
 - **`warnings`**: Digunakan untuk mengelola atau menyembunyikan pesan peringatan yang tidak relevan selama proses analisis.
+
+## 3. Data Preparation
+
+### 3.1 Sumber Data
+Data yang digunakan dalam analisis ini berasal dari [TidyTuesday](https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2020/2020-02-11/hotels.csv). Dataset ini berisi informasi tentang reservasi hotel di dua jenis hotel berbeda, yaitu **City Hotel** dan **Resort Hotel**, antara **1 Juli 2015 hingga 31 Agustus 2017**.
+
+### 3.2 Deskripsi Data
+Dataset ini awalnya dikumpulkan untuk menganalisis pola reservasi hotel, termasuk pembatalan, durasi menginap, dan preferensi pelanggan. Dataset mencakup **119.390 observasi** dan **32 variabel**, dengan rincian sebagai berikut:
+- **Tujuan awal data**: Untuk memahami pola reservasi, tingkat pembatalan, dan faktor yang memengaruhi efisiensi hotel.
+- **Jumlah variabel**: Dataset mencakup variabel seperti `hotel`, `is_canceled`, `lead_time`, `arrival_date`, `adr` (Average Daily Rate), dan lainnya.
+- **Kekhasan data**:
+  - Nilai hilang: Dicatat sebagai `NaN`, ditemukan pada variabel seperti `agent`, `company`, dan `country`.
+  - Skala data: Beberapa variabel seperti `adr` memiliki skala numerik, sementara `hotel` dan `reservation_status` adalah kategorikal.
+  
+Dataset ini mencerminkan pola reservasi nyata dengan beberapa aspek anonim untuk menjaga kerahasiaan.
+
+### 3.3 Langkah-Langkah Pembersihan Data
+Berikut adalah langkah-langkah pembersihan data yang dilakukan untuk memastikan analisis dapat dilakukan dengan optimal:
+1. **Mengimpor data**:
+   Data diimpor menggunakan `pandas`:
+   ```python
+   import pandas as pd
+   url = "https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2020/2020-02-11/hotels.csv"
+   df = pd.read_csv(url)
+   ```
+
+2. **Menghapus variabel yang tidak relevan**:
+   Variabel `agent` dan `company` dihapus karena sebagian besar nilai adalah `NaN` (data tidak lengkap):
+   ```python
+   df.drop(['agent', 'company'], axis=1, inplace=True)
+   ```
+
+3. **Menangani nilai hilang**:
+   Baris dengan nilai hilang dihapus untuk menjaga integritas data:
+   ```python
+   df.dropna(inplace=True)
+   ```
+
+4. **Membatasi nilai ekstrim**:
+   Beberapa entri pada variabel `adr` (Average Daily Rate) memiliki nilai yang terlalu tinggi (>5000) yang dapat mengganggu analisis. Baris tersebut dihapus:
+   ```python
+   df = df[df['adr'] < 5000]
+   ```
+
+### 3.4 Dataset Setelah Pembersihan
+Setelah langkah-langkah pembersihan, dataset terdiri dari **118.897 observasi** dan **30 variabel**. Berikut adalah pratinjau dari dataset yang telah dibersihkan:
+
+| hotel         | is_canceled | lead_time | arrival_date_year | adr   | adults | children | total_of_special_requests |
+|---------------|-------------|-----------|--------------------|-------|--------|----------|---------------------------|
+| Resort Hotel  | 0           | 342       | 2015               | 0.00  | 2      | 0.0      | 0                         |
+| City Hotel    | 1           | 102       | 2017               | 225.43| 3      | 0.0      | 2                         |
+| Resort Hotel  | 0           | 7         | 2015               | 75.00 | 1      | 0.0      | 0                         |
+| City Hotel    | 1           | 205       | 2017               | 151.20| 2      | 0.0      | 2                         |
+| Resort Hotel  | 0           | 14        | 2015               | 98.00 | 2      | 0.0      | 1                         |
+
+### 3.5 Ringkasan Variabel Penting
+Berikut adalah variabel utama yang dianalisis:
+- **hotel**: Jenis hotel (`City Hotel` atau `Resort Hotel`).
+- **is_canceled**: Status pembatalan (0 = Tidak dibatalkan, 1 = Dibatalkan).
+- **lead_time**: Waktu antara pemesanan dan tanggal kedatangan.
+- **adr**: Tarif rata-rata harian (dalam Euro).
+- **adults** dan **children**: Jumlah tamu dewasa dan anak-anak dalam setiap reservasi.
+- **total_of_special_requests**: Jumlah permintaan khusus dari pelanggan.
+
+### Statistik Ringkasan
+Berikut adalah statistik ringkasan untuk beberapa variabel numerik:
+
+| Variabel                   | Rata-rata | Min   | Maks  | Standar Deviasi |
+|----------------------------|-----------|-------|-------|------------------|
+| is_canceled                | 0.37      | 0     | 1     | 0.48             |
+| lead_time                  | 104.31    | 0     | 737   | 106.90           |
+| adr                        | 101.96    | -6.38 | 510.0 | 48.09            |
+| total_of_special_requests  | 0.57      | 0     | 5     | 0.79             |
+
+Dataset bersih ini siap digunakan untuk analisis eksplorasi ataupun pengembangan model.
