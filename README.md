@@ -25,3 +25,37 @@ Hasil analisis ini akan memberikan manfaat berikut:
 - **Keputusan Promosi**: Mengidentifikasi waktu dan tempat yang membutuhkan promosi lebih intensif.
 - **Peningkatan Pelayanan**: Memberikan wawasan tentang preferensi pelanggan untuk meningkatkan pengalaman mereka selama menginap.
 - **Efisiensi Operasional**: Mengurangi pemborosan sumber daya akibat pembatalan mendadak.
+
+## 2. Package yang Diperlukan
+
+### 2.1 Daftar Package yang Digunakan
+Analisis ini dilakukan menggunakan beberapa package Python. Untuk memastikan pembaca dapat mereplikasi analisis ini, berikut adalah daftar package yang digunakan dan fungsinya:
+
+```python
+# Import semua package yang diperlukan
+import pandas as pd                # Untuk manipulasi data dan analisis
+import matplotlib.pyplot as plt    # Untuk membuat visualisasi data
+import seaborn as sns              # Untuk visualisasi data yang lebih interaktif
+import warnings                    # Untuk menghilangkan pesan peringatan
+```
+
+### 2.2 Menghilangkan Pesan dan Peringatan
+Untuk menjaga agar output tetap bersih dan bebas dari pesan peringatan selama analisis, perintah berikut digunakan:
+
+```python
+# Menghilangkan peringatan
+warnings.filterwarnings('ignore')
+```
+
+### Cara Instalasi Package
+Jika package di atas belum terinstal di sistem Anda, gunakan perintah berikut untuk menginstalnya:
+
+```bash
+pip install pandas matplotlib seaborn
+```
+
+### Penjelasan Fungsi Package
+- **`pandas`**: Memanipulasi dataset, seperti memuat data, membersihkan data, dan analisis berbasis tabel.
+- **`matplotlib`**: Membuat grafik sederhana hingga kompleks untuk menganalisis data.
+- **`seaborn`**: Visualisasi tingkat lanjut, seperti heatmap, countplot, dan distribusi data.
+- **`warnings`**: Digunakan untuk mengelola atau menyembunyikan pesan peringatan yang tidak relevan selama proses analisis.
